@@ -101,3 +101,17 @@ SELECT animals.name, owners.full_name FROM owners INNER JOIN animals ON animals.
 SELECT animals.name, owners.full_name FROM owners INNER JOIN animals ON animals.owner_id = owners.id WHERE owners.full_name = 'Dean Winchester';
 
 SELECT animals.name, owners.full_name FROM owners INNER JOIN animals ON animals.owner_id = owners.id WHERE owners.full_name = 'Jodie Whittaker';
+
+--How many animals are there per species?
+
+  SELECT COUNT(animals) FROM animals INNER JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon'; -- 4
+
+ SELECT COUNT(animals) FROM animals INNER JOIN spacies ON animals.species_id = species.id WHERE spacies.name = 'Digimon'; -- 6
+
+-- List all Digimon owned by Jennifer Orwell.
+SELECT * FROM animals INNER JOIN owners ON animals.owner_id = owners.id INNER JOIN species ON animals.species_id = species.id WHERE animals.escape_attempts = 0 AND owners.full_name = 'Dean Winchester';
+
+-- Who owns the most animals?
+
+SELECT animals.owner_id, owners.full_name, COUNT(animals.owner_id) FROM animals INNER JOIN owners ON animals.owner_id = owners.id GROUP BY animals.owner_id, owners.full_name ORDER BY COUNT(*) DESC LIMIT 1;
+
