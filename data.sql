@@ -149,3 +149,4 @@ INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES ((SELECT id from 
 
  
 
+ 
