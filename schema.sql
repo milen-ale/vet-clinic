@@ -65,3 +65,13 @@ CREATE TABLE visits (
     date_of_visit DATE
 );
 
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX friends_city_desc ON friends(city DESC);
+
+CREATE INDEX  animal_id_index ON visits (animals_id); 
+
+CREATE INDEX vets_id_index ON visits(vets_id); 
+
+CREATE INDEX email_index ON owners(email);
