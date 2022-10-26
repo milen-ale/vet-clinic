@@ -1,8 +1,6 @@
 # curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+>This is a simple relational database for vet_clinic. The database contains a table for animals. The table contains information like name of the animal, date of birth, weight and more.
 
 ## Getting Started
 
@@ -21,11 +19,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@milenalebel2](https://twitter.com/milenalebel2)
 - LinkedIn: [milen-alebe](https://linkedin.com/in/milen-alebe)
 
+
 👤 **Author**
 
 - GitHub: [Christabelle143](https://github.com/Christabelle143)
 - Twitter: [@christabelleyo](https://twitter.com/christabelleyo)
 - LinkedIn: [YoutaChristabelle](https://linkedin.com/in/YoutaChristabelle)
+
 
 
 ## 🤝 Contributing
