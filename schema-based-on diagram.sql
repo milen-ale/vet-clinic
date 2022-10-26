@@ -41,4 +41,39 @@ CREATE TABLE treatments (
   type VARCHAR(50),
   name VARCHAR(100)
 );
+-- Invoice Items Table
+CREATE TABLE invoice_items(
+  id BIGSERIAL PRIMARY KEY NOT NULL,
+  unit_price DECIMAL NOT NULL,
+  quantity INT NOT NULL,
+  total_price DECIMAL NOT NULL,
+  invoice_id INT NOT NULL,
+  treatment_id INT NOT NULL,
+  CONSTRAINT fk_invoice FOREIGN KEY (invoice_id) REFERENCES invoices(id),
+  CONSTRAINT fk_treatments FOREIGN KEY (treatment_id) REFERENCES treatments(id)
+);
+-- Add indexes for foreign keys
+CREATE INDEX ON invoice_items (invoice_id);
+CREATE INDEX ON invoice_items (treatment_id);
+-- medical_treatments
+CREATE TABLE medical_treatments (
+  treatments_id INT,
+  invoice_items_id INT,
+  PRIMARY KEY(treatments_id,invoice_items_id),
+  CONSTRAINT fk_treatments FOREIGN KEY(treatments_id) REFERENCES treatments(id),
+  CONSTRAINT fk_invoice_items FOREIGN KEY(invoice_items_id) REFERENCES invoice_items(id)
+);
+-- Add indexes for foreign keys
+CREATE INDEX ON medical_treatments (treatments_id);
+CREATE INDEX ON medical_treatments (invoice_items_id);
+
+
+
+
+
+
+
+
+
+
 
