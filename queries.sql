@@ -1,5 +1,13 @@
 /*Queries that provide answers to the questions from all projects.*/
 
+
+SELECT * from animals WHERE name = 'Luna';
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+
+
 SELECT name from animals WHERE right (name, 3) = 'mon';
 SELECT name from animals where date_of_birth between '2016-01-01' and '2019-12-31';
 SELECT name from animals WHERE neutered = TRUE AND escape_attempts < 3;
@@ -154,3 +162,4 @@ SELECT COUNT(*) FROM vets LEFT JOIN specializations ON specializations.species_i
 --What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 
 SELECT animals.species_id, COUNT(*) FROM animals INNER JOIN visits ON animals.id = visits.animals_id WHERE visits.vets_id = 2 GROUP BY animals.species_id ORDER BY COUNT(*) DESC LIMIT 1;
+
