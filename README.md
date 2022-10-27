@@ -26,11 +26,14 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@milenalebel2](https://twitter.com/milenalebel2)
 - LinkedIn: [milen-alebe](https://linkedin.com/in/milen-alebe)
 
-👤 **Author**
+
+
+👤 **Author 2**
 
 - GitHub: [Christabelle143](https://github.com/Christabelle143)
 - Twitter: [@christabelleyo](https://twitter.com/christabelleyo)
 - LinkedIn: [YoutaChristabelle](https://linkedin.com/in/YoutaChristabelle)
+
 
 
 ## 🤝 Contributing
