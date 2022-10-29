@@ -51,7 +51,6 @@ CREATE TABLE vets (
     date_of_graduation DATE
 );
 
-=======
 );
 
 --CREATE species tabel
